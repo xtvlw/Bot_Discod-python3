@@ -10,7 +10,7 @@ data = sqlite3.connect("DataBase.db")
 cursor = data.cursor()
 
 client = discord.Client()
-token = "NzEwNDg0NTQzOTM2NjU5NTU4.Xs_TAA.72fnhIXhv2LW7IUpJ2UZg4pUKFI"
+token = "put your token here"
 
 
 def function(max_len, table):
