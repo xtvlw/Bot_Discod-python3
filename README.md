@@ -16,3 +16,6 @@ pip3 install sqlite or pip install sqlite.
 
 
 thanks for test my first Bot.
+
+you need to put all files in the same folder.
+ 
