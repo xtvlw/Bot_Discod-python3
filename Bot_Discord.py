@@ -5,6 +5,7 @@ import sqlite3
 
 
 element, NoneNumbers = "", []
+embed = discord.Embed(color=580)
 
 args = ["lolis_images", "oppais_images", "hentai_images",
         "lolis_gifs", "oppais_gifs", "hentai_gifs"]
@@ -54,18 +55,18 @@ async def on_ready():
 @client.event
 async def on_message(message):
     global element
+    msg = message.content.lower()
     if message.author == client.user:
         return
-
     for i in range(len(Commands)):
-        if message.content.startswith("-h") or message.content.startswith("--help"):
-            await message.channel.send(Help_Message)
+        if msg.startswith("-h") or msg.startswith("--help"):
+            style = discord.Embed(title=Help_Message, color=580)
+            await message.channel.send(embed=style)
             break
-        if message.content.startswith(Commands[i]):
+        if msg.startswith(Commands[i]):
             function(Max_lens[i], args[i])
-            if i == 2 or i == 5:
-                element = f"||{element}||"
-            await message.channel.send(element)
+            embed.set_image(url=element)
+            await message.channel.send(embed=embed) if not msg.startswith(".gif-hentai") else await message.channel.send(element)
             break
 
 
