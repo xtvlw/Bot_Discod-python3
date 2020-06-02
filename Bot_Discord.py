@@ -66,7 +66,10 @@ async def on_message(message):
         if msg.startswith(Commands[i]):
             function(Max_lens[i], args[i])
             embed.set_image(url=element)
-            await message.channel.send(embed=embed) if not msg.startswith(".gif-hentai") else await message.channel.send(element)
+            if not (("mp4" in element) or ("webm" in element) or ("webp" in element)):
+                await message.channel.send(embed=embed)
+            else:
+                await message.channel.send(element)
             break
 
 
