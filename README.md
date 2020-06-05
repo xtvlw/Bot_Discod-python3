@@ -22,7 +22,7 @@ you need to put all files in the same folder.
 to help send "-h" or "--help".
 
 
-#Bot_Discord_Interations
+# Bot_Discord_Interations
 
 
 You need install SQlite3, discord and googletrans for that only execute this commands on terminal.
