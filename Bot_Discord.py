@@ -32,13 +32,11 @@ def function(max_len, table):
     global element, NoneNumbers
     element_position = randrange(1, max_len)
 
-    sleep(0.5)
     while element_position in NoneNumbers:
         element_position = randrange(1, max_len)
     NoneNumbers += [element_position]
     if len(NoneNumbers) == 20:
         NoneNumbers = []
-    sleep(0.5)
 
     element = cursor.execute(f"SELECT link FROM {table} WHERE id={element_position}")
     for i in element:
