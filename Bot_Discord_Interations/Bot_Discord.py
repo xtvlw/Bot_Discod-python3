@@ -10,7 +10,7 @@ cursor = data.cursor()
 img, style = "", ""
 
 client = discord.Client()
-token = "NzEwNDg0NTQzOTM2NjU5NTU4.XtUzSQ.MtKyuz0XmVscgwxReJWIA_EoiB0"
+token = "put your bot token here" # <-- TOKEN
 embed = discord.Embed
 
 Help_Message = ("*kiss {pessoa} => todas as preferencias.\n"
