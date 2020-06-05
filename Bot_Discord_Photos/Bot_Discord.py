@@ -18,7 +18,7 @@ data = sqlite3.connect("DataBase.db")
 cursor = data.cursor()
 
 client = discord.Client()
-token = "NzEwNDg0NTQzOTM2NjU5NTU4.XtBbiQ.zWAb4N-JTY6RFPVY3J75J4Aptjg"
+token = "put your bot token here" # <--- TOKEN
 
 Help_Message = (".loli => send a loli photo\n"
                 ".oppai => send a oppai phote\n"
